@@ -1,0 +1,150 @@
+# ==============================================================
+# [versions] section: Define las versiones de plugins y librerías.
+# Estas claves se utilizan en las secciones de [libraries] y [plugins]
+# para referenciar las versiones de forma centralizada.
+# ==============================================================
+
+[versions]
+agp = "8.8.0"                             # Versión del Android Gradle Plugin.
+animation = "1.7.7"                       # Versión para animaciones en Compose.
+coilCompose = "2.4.0"                     # Versión de Coil para Compose.
+converterGson = "2.9.0"                   # Versión del convertidor Gson para Retrofit.
+coreTesting = "2.2.0"                     # Versión de AndroidX Core Testing.
+firebaseBom = "33.8.0"                    # Versión del Firebase BOM.
+foundation = "1.7.7"                      # Versión de la librería Foundation de Compose.
+hiltAndroid = "2.48.1"                    # Versión de Dagger Hilt para Android.
+hiltNavigationCompose = "1.2.0"           # Versión de Hilt Navigation para Compose.
+itext7Core = "8.0.3"                      # Versión de iText7 Core para generación de PDFs.
+kotlin = "1.9.0"                          # Versión de Kotlin.
+coreKtx = "1.15.0"                        # Versión de AndroidX Core KTX.
+junit = "4.13.2"                          # Versión de JUnit para pruebas unitarias.
+junitVersion = "1.2.1"                    # Versión de la extensión JUnit de AndroidX.
+espressoCore = "3.6.1"                    # Versión de Espresso para pruebas de UI.
+kotlinGradlePlugin = "1.9.0"              # Versión del plugin Gradle de Kotlin.
+kotlinxCoroutinesAndroid = "1.7.3"        # Versión de Kotlin Coroutines para Android.
+kotlinxCoroutinesTest = "1.7.3"           # Versión de Kotlin Coroutines para pruebas.
+lifecycleRuntimeCompose = "2.8.7"         # Versión de Lifecycle Runtime para Compose.
+lifecycleRuntimeKtx = "2.8.7"             # Versión de Lifecycle Runtime KTX.
+activityCompose = "1.10.0"                # Versión de Activity Compose.
+composeBom = "2024.04.01"                 # Versión del BOM de Compose.
+lifecycleViewmodelCompose = "2.8.7"         # Versión de Lifecycle ViewModel para Compose.
+loggingInterceptor = "4.12.0"             # Versión del Logging Interceptor de OkHttp.
+mapsCompose = "2.15.0"                    # Versión de Maps Compose.
+material3 = "1.3.1"                       # Versión de Material 3 para Compose.
+navigationCompose = "2.8.6"               # Versión de Navigation Compose.
+playServicesMaps = "19.0.0"               # Versión de Play Services Maps.
+retrofit = "2.9.0"                        # Versión de Retrofit.
+roomRuntime = "2.6.1"                     # Versión de Room (Runtime, KTX y Compiler).
+runtimeLivedata = "1.7.7"                 # Versión de Runtime LiveData para Compose.
+securityCrypto = "1.1.0-alpha06"          # Versión de AndroidX Security Crypto.
+speechRecognition = "1.0.0"               # Versión de Speech Recognition (no se encuentra en repositorios).
+timber = "5.0.1"                          # Versión de Timber para logging.
+ui = "1.7.7"                              # Versión de la UI de Compose.
+uiTestJunit4 = "1.7.7"                      # Versión de UI Test JUnit4 para Compose.
+uiTooling = "1.7.7"                       # Versión de UI Tooling para Compose.
+uiToolingPreview = "1.7.7"                # Versión de UI Tooling Preview para Compose.
+compose = "1.5.0"                         # Versión del plugin de Compose (JetBrains Compose).
+
+# ==============================================================
+# [libraries] section: Define las dependencias de librerías.
+# Cada entrada especifica el grupo, nombre y versión (referenciada desde [versions])
+# para que puedas usarlas a través del version catalog.
+# ==============================================================
+
+[libraries]
+androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "animation" }
+androidx-animation-graphics = { module = "androidx.compose.animation:animation-graphics", version.ref = "animation" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeCompose" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "runtimeLivedata" }
+androidx-security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+itext7-core = { module = "com.itextpdf:itext7-core", version.ref = "itext7Core" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsCompose" }
+material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiTestJunit4" }
+ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
+ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
+
+# ==============================================================
+# [plugins] section: Define los plugins a utilizar en el proyecto.
+# Cada entrada especifica el id del plugin y la versión (o referencia de versión).
+# ==============================================================
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version = "2.48.1" }
+
+
+
+
+#[versions]
+#agp = "8.8.0"
+#kotlin = "2.0.0"
+#coreKtx = "1.15.0"
+#junit = "4.13.2"
+#junitVersion = "1.2.1"
+#espressoCore = "3.6.1"
+#lifecycleRuntimeKtx = "2.8.7"
+#activityCompose = "1.10.0"
+#composeBom = "2024.04.01"
+#
+#[libraries]
+#androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+#junit = { group = "junit", name = "junit", version.ref = "junit" }
+#androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+#androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+#androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+#androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+#androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+#androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+#androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+#androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+#androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+#androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+#androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+#androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+#
+#[plugins]
+#android-application = { id = "com.android.application", version.ref = "agp" }
+#kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+#kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+#

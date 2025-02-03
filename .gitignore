@@ -1,15 +1,53 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+# --- Sistema Operativo ---
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+Thumbs.db
+
+# --- Android Studio / IDE ---
+.idea/
+*.iml
+.navigation/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
 local.properties
+
+# --- Build y Gradle ---
+.gradle/
+build/
+**/build/
+**/*.apk
+**/*.aab
+**/*.ap_
+captures/
+.externalNativeBuild/
+.cxx/
+output.json
+
+# --- Dependencias y logs ---
+*.log
+*.hprof
+
+# --- Archivos Sensibles ---
+*.jks
+*.keystore
+google-services.json
+
+# --- Kotlin ---
+*.class
+.mtj.tmp/
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# --- Otros ---
+/bin/
+/gen/
+/out/
+/proguard/
+.settings/
+.cproject
